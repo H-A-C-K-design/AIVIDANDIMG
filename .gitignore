@@ -1,0 +1,9 @@
+ConsisID/
+__pycache__/
+*.pyc
+outputs/
+temp_generated_image.png
+temp_generated_video.mp4
+.venv/
+venv/
+env/

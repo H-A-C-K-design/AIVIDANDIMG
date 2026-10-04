@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Studio - Text to Image & Video</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-animation">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>AI <span class="gradient-text">Studio</span></h1>
+            <p>Generate highly realistic images and consistent videos using Qwen and ConsisID.</p>
+        </header>
+
+        <main>
+            <div class="input-section glass-panel">
+                <label for="prompt">What do you want to create?</label>
+                <textarea id="prompt" rows="3" placeholder="A boy walking along a city street, filmed in black and white on a classic 35mm camera..."></textarea>
+                <button id="generate-btn">
+                    <span class="btn-text">Generate Magic</span>
+                    <span class="btn-icon">✨</span>
+                </button>
+            </div>
+
+            <div id="loading-state" class="hidden">
+                <div class="spinner"></div>
+                <p>Synthesizing your imagination... (This may take a minute)</p>
+            </div>
+
+            <div id="results-section" class="results-grid hidden">
+                <div class="result-card glass-panel" style="grid-column: 1 / -1; margin-bottom: -1rem;">
+                    <h3>Model's Enhanced Vision</h3>
+                    <p id="enhanced-prompt-display" style="color: var(--secondary); font-family: monospace; white-space: pre-wrap; background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 8px;"></p>
+                </div>
+                <div class="result-card glass-panel">
+                    <h3>Generated Image</h3>
+                    <div class="media-container" id="image-container">
+                        <!-- Image injected via JS -->
+                    </div>
+                </div>
+                <div class="result-card glass-panel">
+                    <h3>Generated Video</h3>
+                    <div class="media-container" id="video-container">
+                        <!-- Video injected via JS -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
